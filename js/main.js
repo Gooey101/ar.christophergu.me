@@ -44,6 +44,8 @@ function goToDataLink() {
 }
 
 $(document).ready(() => {
+    $('body').height(window.innerHeight);
+    
     setCenterPageBoxTop();
     setupCenterBoxes();
     
@@ -61,6 +63,8 @@ $(document).ready(() => {
 });
 
 $(window).resize(() => {
+    $('body').height(window.innerHeight);
+    
     setCenterPageBoxTop();
     adjustAboutPage();
 
