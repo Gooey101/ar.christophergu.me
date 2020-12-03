@@ -1262,6 +1262,7 @@ body {
 }
 
 #social .icons a img {
+    height: 25px;
     transition: all 0.2s linear;
 }
 
