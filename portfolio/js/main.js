@@ -39,8 +39,8 @@ $(document).ready(() => {
         $(this).html($(this)[0].hash.substr(1));
     });
 
-    $('.navbar li:not(.quote-button) a').each(function() {
-        if($(this)[0].hash.startsWith('#')) $(this).html($(this)[0].hash.substr(1));
+    $('.navbar li a').each(function() {
+        $(this).html($(this)[0].hash.substr(1));
     });
 
     if($(window).width() < 450) {
@@ -67,8 +67,6 @@ $(document).ready(() => {
 });
 
 $(window).resize(() => {
-    $('body').height(window.innerHeight);
-    
     if($(window).width() > 991) {
         $('.navbar').removeClass('expanded');
         $('.navbar-collapse').removeClass('expanded');
@@ -158,23 +156,23 @@ $('#about .gallery-buttons .prev').click(function() {
     rotationHandle = window.setInterval(advanceGallery, galleyRotationInterval * 1000);
 });
 
-// $('#portfolio a').click(function(e) {
-//     e.preventDefault();
+$('#portfolio a').click(function(e) {
+    e.preventDefault();
     
-//     window.localStorage.setItem('activePortfolioFilter', $(this)[0].hash);
-//     var classNameToShow = $(this)[0].hash.substr(1);
+    window.localStorage.setItem('activePortfolioFilter', $(this)[0].hash);
+    var classNameToShow = $(this)[0].hash.substr(1);
 
-//     $('#portfolio a').removeClass('active');
-//     $(this).addClass('active');
+    $('#portfolio a').removeClass('active');
+    $(this).addClass('active');
 
-//     $('#portfolio .portfolio-grid .item').each(function() {
-//         if($(this).hasClass(classNameToShow) || classNameToShow === 'all') {
-//             $(this).css('display', '');
-//         } else {
-//             $(this).css('display', 'none');
-//         }
-//     });
-// });
+    $('#portfolio .portfolio-grid .item').each(function() {
+        if($(this).hasClass(classNameToShow) || classNameToShow === 'all') {
+            $(this).css('display', '');
+        } else {
+            $(this).css('display', 'none');
+        }
+    });
+});
 
 $('#contact form #submit').click(function(e) {
     e.preventDefault();
