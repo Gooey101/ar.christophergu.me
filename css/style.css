@@ -632,6 +632,12 @@ body {
     }
 }
 
+@media (max-width: 449px) {
+    #about .gallery-buttons {
+        max-height: 30px;
+    }
+}
+
 /* End About Page Center Page Box Specific Responsive Styles */
 
 /* Portfolio Page Center Page Box Specific Styles */
