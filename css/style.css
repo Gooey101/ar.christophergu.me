@@ -634,7 +634,7 @@ body {
 
 @media (max-width: 449px) {
     #about .gallery-buttons {
-        max-height: 30px;
+        height: 30px;
     }
 }
 
