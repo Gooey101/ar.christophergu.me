@@ -617,6 +617,10 @@ body {
     transition: all 0.1s linear;
 }
 
+#about .gallery-buttons button img {
+    height: 30px;
+}
+
 /* End About Page Center Page Box Specific Styles */
 
 /* About Page Center Page Box Specific Responsive Styles */
@@ -629,12 +633,6 @@ body {
 @media (max-width: 449px) {
     #about .about-content .about-gallery img {
         width: 100%;
-    }
-}
-
-@media (max-width: 449px) {
-    #about .gallery-buttons {
-        height: 30px;
     }
 }
 
